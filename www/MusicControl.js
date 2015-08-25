@@ -17,6 +17,9 @@ module.exports = {
   next: function(cb) {
     return this._execute("next", cb);
   },
+  isactive: function(cb) {
+    return this._execute("isactive", cb);
+  },
   _execute: function(mcCmd, callback) {
     return cordova.exec(function(cb) {
       if (callback) {

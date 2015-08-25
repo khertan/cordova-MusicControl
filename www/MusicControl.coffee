@@ -17,6 +17,9 @@ module.exports =
   next: (cb) ->
     @_execute "next", cb
 
+  isactive: (cb) ->
+    @_execute "isactive", cb
+
   _execute: (mcCmd, callback) ->
     cordova.exec (cb) ->
       callback(null, cb) if callback
